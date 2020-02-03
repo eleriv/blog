@@ -15,7 +15,7 @@ class User
     public function findUserByEmail($email){
         $this->db->query('SELECT * FROM users WHERE email = :email');
         $this->db->bind('email',$email);
-        $row - $this->db->getOne();
+        $row = $this->db->getOne();
 
         if($this->db->rowCount() > 0){
             return true;
@@ -24,7 +24,7 @@ class User
         }
     }
     public function register($data){
-        $this->db->guery('INSERT INTO users (name, email, password) VALUES(:name, :email, :password)');
+        $this->db->query('INSERT INTO users (name, email, password) VALUES(:name, :email, :password)');
 
         $this->db->bind(':name', $data['name']);
         $this->db->bind(':email', $data['email']);
