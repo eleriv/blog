@@ -3,6 +3,9 @@
 
 class Pages extends Controller
 {
+    /**
+     * Page constructor.
+     */
     public function __construct()
     {
     }
